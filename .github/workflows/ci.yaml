@@ -59,38 +59,38 @@ jobs:
           branch: ${{ github.ref }}
           commit_author_email: ts_ci@github.com
 
-  create_github_release:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    needs:
-      - update_changelog
-      - check_if_version_upgraded
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.ref }}
-      - name: Build GitHub release body
-        id: step1
-        run: |
-          if [ "$FROM_VERSION" = "0.0.0" ]; then
-              echo "::set-output name=body::🚀"
-          else
-              echo "::set-output name=body::📋 [CHANGELOG](https://github.com/$GITHUB_REPOSITORY/blob/v$TO_VERSION/CHANGELOG.md)"
-          fi
-        env:
-          FROM_VERSION: ${{ needs.check_if_version_upgraded.outputs.from_version }}
-          TO_VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
-      - uses: garronej/action-gh-release@v0.2.0
-        with:
-          name: Release v${{ needs.check_if_version_upgraded.outputs.to_version }}
-          tag_name: v${{ needs.check_if_version_upgraded.outputs.to_version }}
-          target_commitish: ${{ github.ref }}
-          body: ${{ steps.step1.outputs.body }}
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # create_github_release:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: write
+  #   needs:
+  #     - update_changelog
+  #     - check_if_version_upgraded
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         ref: ${{ github.ref }}
+  #     - name: Build GitHub release body
+  #       id: step1
+  #       run: |
+  #         if [ "$FROM_VERSION" = "0.0.0" ]; then
+  #             echo "::set-output name=body::🚀"
+  #         else
+  #             echo "::set-output name=body::📋 [CHANGELOG](https://github.com/$GITHUB_REPOSITORY/blob/v$TO_VERSION/CHANGELOG.md)"
+  #         fi
+  #       env:
+  #         FROM_VERSION: ${{ needs.check_if_version_upgraded.outputs.from_version }}
+  #         TO_VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
+  #     - uses: garronej/action-gh-release@v0.2.0
+  #       with:
+  #         name: Release v${{ needs.check_if_version_upgraded.outputs.to_version }}
+  #         tag_name: v${{ needs.check_if_version_upgraded.outputs.to_version }}
+  #         target_commitish: ${{ github.ref }}
+  #         body: ${{ steps.step1.outputs.body }}
+  #         draft: false
+  #         prerelease: false
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish_on_npm:
     runs-on: ubuntu-latest
