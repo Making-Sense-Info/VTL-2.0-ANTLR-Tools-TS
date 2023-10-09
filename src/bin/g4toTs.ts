@@ -1,9 +1,5 @@
 import * as fs from "fs";
-import { join as pathJoin, basename as pathBasename, dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { join as pathJoin, basename as pathBasename } from "path";
 
 const libDirPath = pathJoin(__dirname, "..", "lib");
 

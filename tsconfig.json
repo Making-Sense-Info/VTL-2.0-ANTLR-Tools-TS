@@ -1,11 +1,12 @@
 {
 	"compilerOptions": {
-		"target": "ES6",
-		"module": "ES2020",
-		"moduleResolution": "Node",
+		"module": "CommonJS",
+		"target": "es5",
+		"moduleResolution": "node",
+		"lib": ["es2015", "DOM", "ES2019.Object"],
 		"esModuleInterop": true,
-		"sourceMap": true,
 		"declaration": true,
+		"sourceMap": true,
 		"outDir": "./dist",
 		"newLine": "LF",
 		"noUnusedLocals": false,
