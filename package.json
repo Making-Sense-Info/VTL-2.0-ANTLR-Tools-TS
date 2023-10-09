@@ -11,7 +11,7 @@
 	"types": "dist/lib/index.d.ts",
 	"scripts": {
 		"build-grammar": "cd src/lib && antlr4ts -no-visitor -no-listener Vtl.g4 -o ./generated",
-		"g4ToTs": "ts-node src/bin/g4toTs",
+		"g4ToTs": "ts-node --esm src/bin/g4toTs",
 		"build": "yarn build-grammar && yarn g4ToTs && tsc"
 	},
 	"author": "u/NicoLaval",
