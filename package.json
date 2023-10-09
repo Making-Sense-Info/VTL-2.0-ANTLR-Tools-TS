@@ -6,6 +6,7 @@
 		"type": "git",
 		"url": "git://github.com/Making-Sense-Info/VTL-2.0-ANTLR-Tools-TS.git"
 	},
+	"type": "module",
 	"main": "dist/lib/index.js",
 	"types": "dist/lib/index.d.ts",
 	"scripts": {
