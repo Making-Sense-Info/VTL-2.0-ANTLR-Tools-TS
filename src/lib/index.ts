@@ -1,5 +1,7 @@
 export { VtlLexer as Lexer } from "./generated/VtlLexer";
 export { VtlParser as Parser } from "./generated/VtlParser";
+export { VtlVisitor as Visitor } from "./generated/VtlVisitor";
+export { VtlListener as Listener } from "./generated/VtlListener";
 export { default as grammar } from "./generated/Vtl.g4";
 
 const initialRule = "start";

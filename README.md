@@ -19,6 +19,8 @@ import {
 	id,
 	Lexer,
 	Parser,
+	Visitor,
+	Listener,
 	grammar,
 	initialRule,
 } from "@making-sense/vtl-2-0-antlr-tools-ts";
