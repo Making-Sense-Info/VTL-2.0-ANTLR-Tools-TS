@@ -27,6 +27,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@making-sense/antlr4ng@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@making-sense/antlr4ng/-/antlr4ng-3.0.4.tgz#0669cfe4b8b0dccde1deebfb658e13595410034b"
+  integrity sha512-grrhXCk7f5On2xC+xenRjPmb7b+Z10mnrSD7aa19Pn4cMv19HJuW2eAJNSWqgX++4zjvCHOovwiyBufEQVfcxg==
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@tsconfig/node10/-/node10-1.0.9.tgz#df4907fc07a886922637b15e02d4cebc4c0021b2"
@@ -68,11 +73,6 @@ antlr4ng-cli@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/antlr4ng-cli/-/antlr4ng-cli-2.0.0.tgz#4f86f3c3818a2170aa1041d4e1633b489af00131"
   integrity sha512-oAt5OSSYhRQn1PgahtpAP4Vp3BApCoCqlzX7Q8ZUWWls4hX59ryYuu0t7Hwrnfk796OxP/vgIJaqxdltd/oEvQ==
-
-antlr4ng@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/antlr4ng/-/antlr4ng-3.0.4.tgz#71a47e6148ae75f72fa5f27fbed5ef3462815c7c"
-  integrity sha512-u1Ww6wVv9hq70E9AaYe5qW3ba8hvnjJdO3ZsKnb3iJWFV/medLEEhbyWwXCvvD2ef0ptdaiIUgmaazS/WE6uyQ==
 
 arg@^4.1.0:
   version "4.1.3"
