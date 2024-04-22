@@ -1,4 +1,5 @@
 export { VtlLexer as Lexer } from "./generated/VtlLexer";
+export * from "./generated/VtlParser";
 export { VtlParser as Parser } from "./generated/VtlParser";
 export { VtlVisitor as Visitor } from "./generated/VtlVisitor";
 export { VtlListener as Listener } from "./generated/VtlListener";
