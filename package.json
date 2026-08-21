@@ -10,8 +10,8 @@
 	"types": "dist/lib/index.d.ts",
 	"scripts": {
 		"build-grammar": "antlr4ng -Dlanguage=TypeScript -o src/lib/generated/ -visitor -listener -Xexact-output-dir src/lib/*.g4",
-		"g4ToTs": "ts-node --skipProject src/bin/g4toTs",
-		"customizeAntlr4ng": "ts-node --skipProject src/bin/customize-antlr4ng",
+		"g4ToTs": "node -r ts-node/register src/bin/g4toTs",
+		"customizeAntlr4ng": "node -r ts-node/register src/bin/customize-antlr4ng",
 		"build": "yarn build-grammar && yarn g4ToTs && yarn customizeAntlr4ng && tsc"
 	},
 	"author": "u/NicoLaval",
@@ -29,13 +29,16 @@
 	],
 	"homepage": "https://github.com/Making-Sense-Info/VTL-2.0-ANTLR-Tools-TS",
 	"devDependencies": {
-		"@making-sense/antlr4ng": "^3.0.4",
-		"@types/node": "^20.12.5",
+		"@making-sense/antlr4ng": "^3.0.16",
+		"@types/node": "^26.2.0",
 		"antlr4ng-cli": "^2.0.0",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.4.4"
+		"typescript": "^6.0.3"
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"peerDependencies": {
+		"@making-sense/antlr4ng": "^3.0.16"
 	}
 }
