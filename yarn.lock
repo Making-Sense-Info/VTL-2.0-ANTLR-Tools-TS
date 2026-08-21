@@ -27,8 +27,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@making-sense/antlr4ng@file:../antlr4ng":
+"@making-sense/antlr4ng@^3.0.16":
   version "3.0.16"
+  resolved "https://registry.yarnpkg.com/@making-sense/antlr4ng/-/antlr4ng-3.0.16.tgz#13296f8c5728703b86c58149ea242f10dcd05666"
+  integrity sha512-mh6VokrVIXYaVPkVd9uPMNFnYckSWXGGpRGIIWb6h1INoi53ubzazlqosapx+1LkzXGjHxBRlzP1wsmE1KwsDw==
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.13"
